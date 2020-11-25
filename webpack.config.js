@@ -15,6 +15,7 @@ Encore
     //.setManifestKeyPrefix('build/')
 
     .autoProvidejQuery()
+
     /*
      * ENTRY CONFIG
      *
