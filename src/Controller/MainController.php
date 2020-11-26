@@ -14,7 +14,9 @@ class MainController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('main/main.html.twig');
+        $user = $this->getUser()->getUsername();
+    
+        return $this->render('main/main.html.twig', ['current_user' => $user]);
     }
 
 }
