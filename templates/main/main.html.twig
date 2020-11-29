@@ -2,18 +2,59 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}EduApp{% endblock %}</title>
+        <script src="{{ 'js/jquery-3.5.1.min.js' }}"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         {% block stylesheets %}
-            <link href="{{ 'css/loginmain.css' }}" rel="stylesheet" />
-            <link href="{{ 'css/loginutil.css' }}" rel="stylesheet" />
+            <link href="{{ 'css/main.css' }}" rel="stylesheet" />
+            <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
         {% endblock %}
     </head>
-    <h3>HI {{current_user}}</h3>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+        <body class="home">
+            <div class="container-fluid display-table">
+                <div class="row display-table-row">
+                    <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+                        <div class="logo">
+                            <h1>EduApp</h1>
+                        </div>
+                        <div class="navi">
+                            <ul>
+                                <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
+                                <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
+                                <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
+                                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
+                                <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
+                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-11 display-table-cell v-align">
+                        <div class="row">
+                            <header>
+                                <div class="col-md-7">
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="header-rightside">
+                                        <ul class="list-inline header-top pull-right">
+                                            <h4>Hi, {{current_user}}</h4>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="user-dashboard">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+        {% endblock %}
         {% block javascripts %}
-            <script src="{{ 'js/jquery-3.5.1.min.js' }}"></script>
-            <script src="{{ 'js/login.js' }}"></script>
         {% endblock %}
     </body>
 </html>
+
