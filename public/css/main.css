@@ -6,6 +6,7 @@
 
 #navigation {
     background: #0e1a35;
+    height: 100%;
 }
 
 #navigation {
@@ -515,9 +516,10 @@ header {
 }
 }
 @media only screen and (min-device-width:998px) and (max-device-width: 1350px){
-        #navigation .logo img {
+    #navigation .logo img {
     max-width: 130px;
     padding: 16px 0 17px;
     width: 100%;
+}
 }
 }
